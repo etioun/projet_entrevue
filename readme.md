@@ -1,5 +1,5 @@
 Prerequisites:
-    - Docker installed
+- Docker installed
 
 How to:
 - download repository
