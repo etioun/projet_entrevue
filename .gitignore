@@ -1,0 +1,6 @@
+front_app/dist
+front_app/node_modules
+**/.pytest_cache
+**/.vscode
+**/venv
+**/__pycache__
