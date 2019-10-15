@@ -21,6 +21,8 @@
 <script>
 import Filter_ from "./components/Filter_.vue";
 
+const REST_SERVICE_HOST = "192.168.99.100:8081";
+
 export default {
   name: "app",
   components: { Filter_ },
@@ -36,7 +38,7 @@ export default {
   },
   methods: {
     fetchTypes: function() {
-      fetch("http://192.168.99.100:8081/institution-types/?format=json")
+      fetch("http://" + REST_SERVICE_HOST + "/institution-types/?format=json")
         .then(response => {
           return response.json();
         })
@@ -47,7 +49,7 @@ export default {
         });
     },
     fetchMarkers: function() {
-      let url = "http://192.168.99.100:8081/institutions/?format=json";
+      let url = "http://" + REST_SERVICE_HOST + "/institutions/?format=json";
       if (this.types.length > 0) {
         let filtered = this.types
           .filter(value => value.selected == true)

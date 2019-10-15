@@ -3,5 +3,5 @@ Prerequisites:
 
 How to:
 - download repository
-- from repository root folder run "docker-compose up"
-- go to "http://localhost:8082/ in your browser
+- from repository root folder run "docker-compose up --build"
+- go to "http://192.168.99.100:8082/" in your browser
