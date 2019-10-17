@@ -21,5 +21,5 @@ ENV VUE_APP_REST_SERVICE_HOST=$VUE_APP_REST_SERVICE_HOST
 # construit l'app pour la production en la minifiant
 RUN npm run build
 
-# EXPOSE 8080
-# CMD [ "http-server", "dist", "-p", "8080", "-a", "0.0.0.0" ]
+EXPOSE 8082
+CMD [ "http-server", "dist", "-p", "8082", "-a", "0.0.0.0" ]
