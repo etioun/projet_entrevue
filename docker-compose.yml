@@ -9,7 +9,10 @@ services:
       - 8081:8081
     command: python manage.py runserver 0.0.0.0:8081
   frontend-app:
-    build: ./front_app
+    build:
+      context: ./front_app
+      args:
+        VUE_APP_REST_SERVICE_HOST: "192.168.99.100:8081"
     expose:
       - 8082
     ports:

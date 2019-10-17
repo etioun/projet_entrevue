@@ -21,7 +21,9 @@
 <script>
 import Filter_ from "./components/Filter_.vue";
 
-const REST_SERVICE_HOST = "192.168.99.100:8081";
+const REST_SERVICE_HOST = process.env.VUE_APP_REST_SERVICE_HOST
+  ? process.env.VUE_APP_REST_SERVICE_HOST
+  : "localhost:8081";
 
 export default {
   name: "app",

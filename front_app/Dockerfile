@@ -15,6 +15,9 @@ RUN npm install
 # copie les fichiers et dossiers du projet dans le dossier de travail (par exemple : le dossier 'app')
 COPY . .
 
+ARG VUE_APP_REST_SERVICE_HOST="localhost:8081"
+ENV VUE_APP_REST_SERVICE_HOST=$VUE_APP_REST_SERVICE_HOST
+
 # construit l'app pour la production en la minifiant
 RUN npm run build
 
